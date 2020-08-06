@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+body {
+  font-family: 'Bangers', cursive;
+}
+
+.section {
+  height: 90vh;
+  position: relative;
+
+  &__container {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  p {
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+}
+
+#first {
+  background: #2cc4cb;
+}
+
+#second {
+  background: #c51350;
+
+  p {
+    opacity: 0;
+  }
+
+  &.active {
+    p {
+      animation-name: textFadeIn;
+      animation-duration: 500ms;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+.bg {
+  background-color: #66cb2c;
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+    transform: rotate(0) scale(0.2);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotate(-45deg) scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
